@@ -19,16 +19,18 @@ window.onload = function () {
     })
     .then(function (data) {
       //console.log(data);
-      for (var i = 0; i < data.length; i++) {
+      for (var i = 0; i < data.length; i++){
         //console.log(data[i])
         let pdata = data[i]
         //console.log(pdata.image);
         let pcard = `<div class="col-md-3">
-                     <div class="card">
+                     <div class="card mt-2">
                        <img src="${pdata.image}" class="card-img-top img-fluid">
                      <div class="card-body">
-                       <h5 class="card-title">${pdata.title}</h5>
-                       <p class="card-text">${pdata.description}</p>
+                       <h4 class="card-title">${pdata.title}</h4>
+                       <p class="card-text">${pdata.price}</p>
+                       <h5 class="card-text">${pdata.category}</h5>
+                       <p class="card-text">${pdata.description}</P>
                        <a href="#" class="btn btn-success me-1">BY NOW</a>
                        <a href="#" class="btn btn-warning">ADD TO CART</a>
                       </div>
